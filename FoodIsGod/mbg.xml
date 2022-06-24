@@ -10,8 +10,8 @@
 		</commentGenerator>
 		<!-- 配置数据库连接 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/foodisgod" userId="root"
-			password="root">
+			connectionURL="jdbc:mysql://114.55.244.19:3306/ffg" userId="ffg"
+			password="djk2FfBLeNwzDrfK">
 		</jdbcConnection>
 
 		<javaTypeResolver>
@@ -19,7 +19,7 @@
 		</javaTypeResolver>
 
 		<!-- 指定javaBean生成的位置 -->
-		<javaModelGenerator targetPackage="bean"
+		<javaModelGenerator targetPackage="com.atguigu.crud.bean"
 			targetProject=".\src\main\java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
@@ -32,20 +32,19 @@
 
 		<!-- 指定dao接口生成的位置，mapper接口 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="dao" targetProject=".\src\main\java">
+			targetPackage="com.atguigu.crud.dao" targetProject=".\src\main\java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
 
 		<!-- table指定每个表的生成策略 -->
-		<table tableName="meals" domainObjectName="Meals"></table>
-		<table tableName="orders" domainObjectName="Orders"></table>
-		<table tableName="orderinformation" domainObjectName="OrderInformation"></table>
-		<table tableName="restaurant" domainObjectName="Restaurant"></table>
-		<table tableName="shoppingcart" domainObjectName="ShoppingCart"></table>
-		<table tableName="sort" domainObjectName="Sort"></table>
-		<table tableName="user" domainObjectName="User"></table>
-
+		<table tableName="Meals" domainObjectName="Meals"></table>
+		<table tableName="Orders" domainObjectName="Orders"></table>
+		<table tableName="OrderInformation" domainObjectName="OrderInformation"></table>
+		<table tableName="Restaurant" domainObjectName="Restaurant"></table>
+		<table tableName="ShoppingCart" domainObjectName="ShoppingCart"></table>
+		<table tableName="Sort" domainObjectName="Sort"></table>
+		<table tableName="User" domainObjectName="User"></table>
 
 
 	</context>

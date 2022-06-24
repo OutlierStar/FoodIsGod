@@ -1,4 +1,4 @@
-package bean;
+package com.atguigu.crud.bean;
 
 public class OrderInformation extends OrderInformationKey {
     private Integer mealsNum;

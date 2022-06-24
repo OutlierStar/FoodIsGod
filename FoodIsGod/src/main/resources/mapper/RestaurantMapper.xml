@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="dao.RestaurantMapper">
-  <resultMap id="BaseResultMap" type="bean.Restaurant">
+<mapper namespace="com.atguigu.crud.dao.RestaurantMapper">
+  <resultMap id="BaseResultMap" type="com.atguigu.crud.bean.Restaurant">
     <result column="restaurant_name" jdbcType="VARCHAR" property="restaurantName" />
     <result column="restaurant_address" jdbcType="VARCHAR" property="restaurantAddress" />
     <result column="restaurant_notice" jdbcType="VARCHAR" property="restaurantNotice" />
@@ -67,13 +67,13 @@
   <sql id="Base_Column_List">
     restaurant_name, restaurant_address, restaurant_notice
   </sql>
-  <select id="selectByExample" parameterType="bean.RestaurantExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.atguigu.crud.bean.RestaurantExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from restaurant
+    from Restaurant
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -81,20 +81,20 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="bean.RestaurantExample">
-    delete from restaurant
+  <delete id="deleteByExample" parameterType="com.atguigu.crud.bean.RestaurantExample">
+    delete from Restaurant
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="bean.Restaurant">
-    insert into restaurant (restaurant_name, restaurant_address, 
+  <insert id="insert" parameterType="com.atguigu.crud.bean.Restaurant">
+    insert into Restaurant (restaurant_name, restaurant_address, 
       restaurant_notice)
     values (#{restaurantName,jdbcType=VARCHAR}, #{restaurantAddress,jdbcType=VARCHAR}, 
       #{restaurantNotice,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="bean.Restaurant">
-    insert into restaurant
+  <insert id="insertSelective" parameterType="com.atguigu.crud.bean.Restaurant">
+    insert into Restaurant
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="restaurantName != null">
         restaurant_name,
@@ -118,14 +118,14 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="bean.RestaurantExample" resultType="java.lang.Long">
-    select count(*) from restaurant
+  <select id="countByExample" parameterType="com.atguigu.crud.bean.RestaurantExample" resultType="java.lang.Long">
+    select count(*) from Restaurant
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update restaurant
+    update Restaurant
     <set>
       <if test="record.restaurantName != null">
         restaurant_name = #{record.restaurantName,jdbcType=VARCHAR},
@@ -142,7 +142,7 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update restaurant
+    update Restaurant
     set restaurant_name = #{record.restaurantName,jdbcType=VARCHAR},
       restaurant_address = #{record.restaurantAddress,jdbcType=VARCHAR},
       restaurant_notice = #{record.restaurantNotice,jdbcType=VARCHAR}

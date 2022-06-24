@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="dao.ShoppingCartMapper">
-  <resultMap id="BaseResultMap" type="bean.ShoppingCart">
+<mapper namespace="com.atguigu.crud.dao.ShoppingCartMapper">
+  <resultMap id="BaseResultMap" type="com.atguigu.crud.bean.ShoppingCart">
     <id column="user_id" jdbcType="INTEGER" property="userId" />
     <id column="meals_id" jdbcType="INTEGER" property="mealsId" />
     <result column="meals_num" jdbcType="INTEGER" property="mealsNum" />
@@ -67,13 +67,13 @@
   <sql id="Base_Column_List">
     user_id, meals_id, meals_num
   </sql>
-  <select id="selectByExample" parameterType="bean.ShoppingCartExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.atguigu.crud.bean.ShoppingCartExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from shoppingcart
+    from ShoppingCart
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -81,32 +81,32 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="bean.ShoppingCartKey" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="com.atguigu.crud.bean.ShoppingCartKey" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from shoppingcart
+    from ShoppingCart
     where user_id = #{userId,jdbcType=INTEGER}
       and meals_id = #{mealsId,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="bean.ShoppingCartKey">
-    delete from shoppingcart
+  <delete id="deleteByPrimaryKey" parameterType="com.atguigu.crud.bean.ShoppingCartKey">
+    delete from ShoppingCart
     where user_id = #{userId,jdbcType=INTEGER}
       and meals_id = #{mealsId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="bean.ShoppingCartExample">
-    delete from shoppingcart
+  <delete id="deleteByExample" parameterType="com.atguigu.crud.bean.ShoppingCartExample">
+    delete from ShoppingCart
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="bean.ShoppingCart">
-    insert into shoppingcart (user_id, meals_id, meals_num
+  <insert id="insert" parameterType="com.atguigu.crud.bean.ShoppingCart">
+    insert into ShoppingCart (user_id, meals_id, meals_num
       )
     values (#{userId,jdbcType=INTEGER}, #{mealsId,jdbcType=INTEGER}, #{mealsNum,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="bean.ShoppingCart">
-    insert into shoppingcart
+  <insert id="insertSelective" parameterType="com.atguigu.crud.bean.ShoppingCart">
+    insert into ShoppingCart
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userId != null">
         user_id,
@@ -130,14 +130,14 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="bean.ShoppingCartExample" resultType="java.lang.Long">
-    select count(*) from shoppingcart
+  <select id="countByExample" parameterType="com.atguigu.crud.bean.ShoppingCartExample" resultType="java.lang.Long">
+    select count(*) from ShoppingCart
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update shoppingcart
+    update ShoppingCart
     <set>
       <if test="record.userId != null">
         user_id = #{record.userId,jdbcType=INTEGER},
@@ -154,7 +154,7 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update shoppingcart
+    update ShoppingCart
     set user_id = #{record.userId,jdbcType=INTEGER},
       meals_id = #{record.mealsId,jdbcType=INTEGER},
       meals_num = #{record.mealsNum,jdbcType=INTEGER}
@@ -162,8 +162,8 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="bean.ShoppingCart">
-    update shoppingcart
+  <update id="updateByPrimaryKeySelective" parameterType="com.atguigu.crud.bean.ShoppingCart">
+    update ShoppingCart
     <set>
       <if test="mealsNum != null">
         meals_num = #{mealsNum,jdbcType=INTEGER},
@@ -172,8 +172,8 @@
     where user_id = #{userId,jdbcType=INTEGER}
       and meals_id = #{mealsId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="bean.ShoppingCart">
-    update shoppingcart
+  <update id="updateByPrimaryKey" parameterType="com.atguigu.crud.bean.ShoppingCart">
+    update ShoppingCart
     set meals_num = #{mealsNum,jdbcType=INTEGER}
     where user_id = #{userId,jdbcType=INTEGER}
       and meals_id = #{mealsId,jdbcType=INTEGER}

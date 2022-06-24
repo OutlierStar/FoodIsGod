@@ -1,4 +1,4 @@
-package test;
+package com.atguigu.crud.test;
 
 import java.io.File;
 import java.util.ArrayList;

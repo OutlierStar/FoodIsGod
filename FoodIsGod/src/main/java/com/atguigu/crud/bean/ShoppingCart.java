@@ -1,4 +1,4 @@
-package bean;
+package com.atguigu.crud.bean;
 
 public class ShoppingCart extends ShoppingCartKey {
     private Integer mealsNum;

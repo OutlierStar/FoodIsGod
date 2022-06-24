@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="dao.SortMapper">
-  <resultMap id="BaseResultMap" type="bean.Sort">
+<mapper namespace="com.atguigu.crud.dao.SortMapper">
+  <resultMap id="BaseResultMap" type="com.atguigu.crud.bean.Sort">
     <id column="sort_id" jdbcType="INTEGER" property="sortId" />
     <result column="sort_name" jdbcType="VARCHAR" property="sortName" />
   </resultMap>
@@ -66,13 +66,13 @@
   <sql id="Base_Column_List">
     sort_id, sort_name
   </sql>
-  <select id="selectByExample" parameterType="bean.SortExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.atguigu.crud.bean.SortExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from sort
+    from Sort
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -83,25 +83,25 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from sort
+    from Sort
     where sort_id = #{sortId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from sort
+    delete from Sort
     where sort_id = #{sortId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="bean.SortExample">
-    delete from sort
+  <delete id="deleteByExample" parameterType="com.atguigu.crud.bean.SortExample">
+    delete from Sort
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="bean.Sort">
-    insert into sort (sort_id, sort_name)
+  <insert id="insert" parameterType="com.atguigu.crud.bean.Sort">
+    insert into Sort (sort_id, sort_name)
     values (#{sortId,jdbcType=INTEGER}, #{sortName,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="bean.Sort">
-    insert into sort
+  <insert id="insertSelective" parameterType="com.atguigu.crud.bean.Sort">
+    insert into Sort
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="sortId != null">
         sort_id,
@@ -119,14 +119,14 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="bean.SortExample" resultType="java.lang.Long">
-    select count(*) from sort
+  <select id="countByExample" parameterType="com.atguigu.crud.bean.SortExample" resultType="java.lang.Long">
+    select count(*) from Sort
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update sort
+    update Sort
     <set>
       <if test="record.sortId != null">
         sort_id = #{record.sortId,jdbcType=INTEGER},
@@ -140,15 +140,15 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update sort
+    update Sort
     set sort_id = #{record.sortId,jdbcType=INTEGER},
       sort_name = #{record.sortName,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="bean.Sort">
-    update sort
+  <update id="updateByPrimaryKeySelective" parameterType="com.atguigu.crud.bean.Sort">
+    update Sort
     <set>
       <if test="sortName != null">
         sort_name = #{sortName,jdbcType=VARCHAR},
@@ -156,8 +156,8 @@
     </set>
     where sort_id = #{sortId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="bean.Sort">
-    update sort
+  <update id="updateByPrimaryKey" parameterType="com.atguigu.crud.bean.Sort">
+    update Sort
     set sort_name = #{sortName,jdbcType=VARCHAR}
     where sort_id = #{sortId,jdbcType=INTEGER}
   </update>

@@ -1,8 +1,8 @@
-package dao;
+package com.atguigu.crud.dao;
 
-import bean.OrderInformation;
-import bean.OrderInformationExample;
-import bean.OrderInformationKey;
+import com.atguigu.crud.bean.OrderInformation;
+import com.atguigu.crud.bean.OrderInformationExample;
+import com.atguigu.crud.bean.OrderInformationKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

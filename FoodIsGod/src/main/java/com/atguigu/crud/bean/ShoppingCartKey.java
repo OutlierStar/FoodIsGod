@@ -1,4 +1,4 @@
-package bean;
+package com.atguigu.crud.bean;
 
 public class ShoppingCartKey {
     private Integer userId;

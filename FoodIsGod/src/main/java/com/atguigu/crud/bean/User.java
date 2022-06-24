@@ -1,4 +1,4 @@
-package bean;
+package com.atguigu.crud.bean;
 
 import java.util.Date;
 

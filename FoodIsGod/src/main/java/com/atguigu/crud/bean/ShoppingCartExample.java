@@ -1,16 +1,16 @@
-package bean;
+package com.atguigu.crud.bean;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RestaurantExample {
+public class ShoppingCartExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public RestaurantExample() {
+    public ShoppingCartExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -104,213 +104,183 @@ public class RestaurantExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andRestaurantNameIsNull() {
-            addCriterion("restaurant_name is null");
+        public Criteria andUserIdIsNull() {
+            addCriterion("user_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameIsNotNull() {
-            addCriterion("restaurant_name is not null");
+        public Criteria andUserIdIsNotNull() {
+            addCriterion("user_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameEqualTo(String value) {
-            addCriterion("restaurant_name =", value, "restaurantName");
+        public Criteria andUserIdEqualTo(Integer value) {
+            addCriterion("user_id =", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameNotEqualTo(String value) {
-            addCriterion("restaurant_name <>", value, "restaurantName");
+        public Criteria andUserIdNotEqualTo(Integer value) {
+            addCriterion("user_id <>", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameGreaterThan(String value) {
-            addCriterion("restaurant_name >", value, "restaurantName");
+        public Criteria andUserIdGreaterThan(Integer value) {
+            addCriterion("user_id >", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameGreaterThanOrEqualTo(String value) {
-            addCriterion("restaurant_name >=", value, "restaurantName");
+        public Criteria andUserIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("user_id >=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameLessThan(String value) {
-            addCriterion("restaurant_name <", value, "restaurantName");
+        public Criteria andUserIdLessThan(Integer value) {
+            addCriterion("user_id <", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameLessThanOrEqualTo(String value) {
-            addCriterion("restaurant_name <=", value, "restaurantName");
+        public Criteria andUserIdLessThanOrEqualTo(Integer value) {
+            addCriterion("user_id <=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameLike(String value) {
-            addCriterion("restaurant_name like", value, "restaurantName");
+        public Criteria andUserIdIn(List<Integer> values) {
+            addCriterion("user_id in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameNotLike(String value) {
-            addCriterion("restaurant_name not like", value, "restaurantName");
+        public Criteria andUserIdNotIn(List<Integer> values) {
+            addCriterion("user_id not in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameIn(List<String> values) {
-            addCriterion("restaurant_name in", values, "restaurantName");
+        public Criteria andUserIdBetween(Integer value1, Integer value2) {
+            addCriterion("user_id between", value1, value2, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameNotIn(List<String> values) {
-            addCriterion("restaurant_name not in", values, "restaurantName");
+        public Criteria andUserIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("user_id not between", value1, value2, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameBetween(String value1, String value2) {
-            addCriterion("restaurant_name between", value1, value2, "restaurantName");
+        public Criteria andMealsIdIsNull() {
+            addCriterion("meals_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNameNotBetween(String value1, String value2) {
-            addCriterion("restaurant_name not between", value1, value2, "restaurantName");
+        public Criteria andMealsIdIsNotNull() {
+            addCriterion("meals_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressIsNull() {
-            addCriterion("restaurant_address is null");
+        public Criteria andMealsIdEqualTo(Integer value) {
+            addCriterion("meals_id =", value, "mealsId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressIsNotNull() {
-            addCriterion("restaurant_address is not null");
+        public Criteria andMealsIdNotEqualTo(Integer value) {
+            addCriterion("meals_id <>", value, "mealsId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressEqualTo(String value) {
-            addCriterion("restaurant_address =", value, "restaurantAddress");
+        public Criteria andMealsIdGreaterThan(Integer value) {
+            addCriterion("meals_id >", value, "mealsId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressNotEqualTo(String value) {
-            addCriterion("restaurant_address <>", value, "restaurantAddress");
+        public Criteria andMealsIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("meals_id >=", value, "mealsId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressGreaterThan(String value) {
-            addCriterion("restaurant_address >", value, "restaurantAddress");
+        public Criteria andMealsIdLessThan(Integer value) {
+            addCriterion("meals_id <", value, "mealsId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressGreaterThanOrEqualTo(String value) {
-            addCriterion("restaurant_address >=", value, "restaurantAddress");
+        public Criteria andMealsIdLessThanOrEqualTo(Integer value) {
+            addCriterion("meals_id <=", value, "mealsId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressLessThan(String value) {
-            addCriterion("restaurant_address <", value, "restaurantAddress");
+        public Criteria andMealsIdIn(List<Integer> values) {
+            addCriterion("meals_id in", values, "mealsId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressLessThanOrEqualTo(String value) {
-            addCriterion("restaurant_address <=", value, "restaurantAddress");
+        public Criteria andMealsIdNotIn(List<Integer> values) {
+            addCriterion("meals_id not in", values, "mealsId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressLike(String value) {
-            addCriterion("restaurant_address like", value, "restaurantAddress");
+        public Criteria andMealsIdBetween(Integer value1, Integer value2) {
+            addCriterion("meals_id between", value1, value2, "mealsId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressNotLike(String value) {
-            addCriterion("restaurant_address not like", value, "restaurantAddress");
+        public Criteria andMealsIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("meals_id not between", value1, value2, "mealsId");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressIn(List<String> values) {
-            addCriterion("restaurant_address in", values, "restaurantAddress");
+        public Criteria andMealsNumIsNull() {
+            addCriterion("meals_num is null");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressNotIn(List<String> values) {
-            addCriterion("restaurant_address not in", values, "restaurantAddress");
+        public Criteria andMealsNumIsNotNull() {
+            addCriterion("meals_num is not null");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressBetween(String value1, String value2) {
-            addCriterion("restaurant_address between", value1, value2, "restaurantAddress");
+        public Criteria andMealsNumEqualTo(Integer value) {
+            addCriterion("meals_num =", value, "mealsNum");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantAddressNotBetween(String value1, String value2) {
-            addCriterion("restaurant_address not between", value1, value2, "restaurantAddress");
+        public Criteria andMealsNumNotEqualTo(Integer value) {
+            addCriterion("meals_num <>", value, "mealsNum");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNoticeIsNull() {
-            addCriterion("restaurant_notice is null");
+        public Criteria andMealsNumGreaterThan(Integer value) {
+            addCriterion("meals_num >", value, "mealsNum");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNoticeIsNotNull() {
-            addCriterion("restaurant_notice is not null");
+        public Criteria andMealsNumGreaterThanOrEqualTo(Integer value) {
+            addCriterion("meals_num >=", value, "mealsNum");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNoticeEqualTo(String value) {
-            addCriterion("restaurant_notice =", value, "restaurantNotice");
+        public Criteria andMealsNumLessThan(Integer value) {
+            addCriterion("meals_num <", value, "mealsNum");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNoticeNotEqualTo(String value) {
-            addCriterion("restaurant_notice <>", value, "restaurantNotice");
+        public Criteria andMealsNumLessThanOrEqualTo(Integer value) {
+            addCriterion("meals_num <=", value, "mealsNum");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNoticeGreaterThan(String value) {
-            addCriterion("restaurant_notice >", value, "restaurantNotice");
+        public Criteria andMealsNumIn(List<Integer> values) {
+            addCriterion("meals_num in", values, "mealsNum");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNoticeGreaterThanOrEqualTo(String value) {
-            addCriterion("restaurant_notice >=", value, "restaurantNotice");
+        public Criteria andMealsNumNotIn(List<Integer> values) {
+            addCriterion("meals_num not in", values, "mealsNum");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNoticeLessThan(String value) {
-            addCriterion("restaurant_notice <", value, "restaurantNotice");
+        public Criteria andMealsNumBetween(Integer value1, Integer value2) {
+            addCriterion("meals_num between", value1, value2, "mealsNum");
             return (Criteria) this;
         }
 
-        public Criteria andRestaurantNoticeLessThanOrEqualTo(String value) {
-            addCriterion("restaurant_notice <=", value, "restaurantNotice");
-            return (Criteria) this;
-        }
-
-        public Criteria andRestaurantNoticeLike(String value) {
-            addCriterion("restaurant_notice like", value, "restaurantNotice");
-            return (Criteria) this;
-        }
-
-        public Criteria andRestaurantNoticeNotLike(String value) {
-            addCriterion("restaurant_notice not like", value, "restaurantNotice");
-            return (Criteria) this;
-        }
-
-        public Criteria andRestaurantNoticeIn(List<String> values) {
-            addCriterion("restaurant_notice in", values, "restaurantNotice");
-            return (Criteria) this;
-        }
-
-        public Criteria andRestaurantNoticeNotIn(List<String> values) {
-            addCriterion("restaurant_notice not in", values, "restaurantNotice");
-            return (Criteria) this;
-        }
-
-        public Criteria andRestaurantNoticeBetween(String value1, String value2) {
-            addCriterion("restaurant_notice between", value1, value2, "restaurantNotice");
-            return (Criteria) this;
-        }
-
-        public Criteria andRestaurantNoticeNotBetween(String value1, String value2) {
-            addCriterion("restaurant_notice not between", value1, value2, "restaurantNotice");
+        public Criteria andMealsNumNotBetween(Integer value1, Integer value2) {
+            addCriterion("meals_num not between", value1, value2, "mealsNum");
             return (Criteria) this;
         }
     }

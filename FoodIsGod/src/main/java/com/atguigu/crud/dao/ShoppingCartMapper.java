@@ -1,8 +1,8 @@
-package dao;
+package com.atguigu.crud.dao;
 
-import bean.ShoppingCart;
-import bean.ShoppingCartExample;
-import bean.ShoppingCartKey;
+import com.atguigu.crud.bean.ShoppingCart;
+import com.atguigu.crud.bean.ShoppingCartExample;
+import com.atguigu.crud.bean.ShoppingCartKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

@@ -1,7 +1,7 @@
-package dao;
+package com.atguigu.crud.dao;
 
-import bean.Sort;
-import bean.SortExample;
+import com.atguigu.crud.bean.Sort;
+import com.atguigu.crud.bean.SortExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
